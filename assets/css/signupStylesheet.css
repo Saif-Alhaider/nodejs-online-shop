@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background-color: rgb(35, 35, 39);
+}
+#title{
+    position: absolute;
+    top:0;
+    left: 0;
+    background-color: white;
+    padding: 10px;
+}
+form{
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    transform: translate(-50%,-50%);
+    font-size: 18px;
+}
+input{
+    display: block;
+    width: 500px;
+    height: 30px;
+    padding: 0px;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+label{
+    color: #fff;
+}
+input:last-child{
+    margin-bottom: 0px;
+}
+button{
+    font-size: 18px;
+}

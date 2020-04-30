@@ -1,0 +1,14 @@
+<%- include('parts/head')  %> 
+    <h3>Login</h3>
+    <div class="container ">
+        <form method="POST">
+              <input type="text" name="email" placeholder="email">
+              <input type="password" name="password" placeholder="password">
+              <button type="submit" class="btn btn-primary">submit</button>
+        </form>
+        <% if(loginError){ %>
+            <br>
+            <p><%= loginError %> </p>
+        <% } %>  
+    </div>
+<%- include('parts/footer')  %> 
