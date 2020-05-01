@@ -10,6 +10,7 @@ const homeRouter = require('./routes/home.route')
 const productRouter = require('./routes/product.router')
 const signupRouter = require('./routes/authentications.routes/signup.route')
 const app = express();
+
 // needed files images icons etc..
 app.use(express.static(path.join(__dirname,'assets')));
 app.use(express.static(path.join(__dirname,'images')));
