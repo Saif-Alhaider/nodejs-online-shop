@@ -1,11 +1,16 @@
 const authModel = require('../../model/authentication.models/auth.model')
+const validationResult = require('express-validator').validationResult
 exports.getSignup = (req,res,next)=>{
     res.render('signup',{
         headstyle:'/css/signupStylesheet.css'
     })
 }
 exports.postSignup = (req,res,next) => {
-    authModel.CreateNewUser(req.body.username,req.body.email,req.body.password).then(()=> res.redirect('/login') ).catch(err => console.log(err))
+    return console.log(validationResult(req))
+    authModel.CreateNewUser(req.body.username,req.body.email,req.body.password)
+    .then(() =>
+     res.redirect('/login'))
+     .catch(err => console.log(err))
 }
 exports.getLogin = (req,res,next)=>{
     res.render('login',{
