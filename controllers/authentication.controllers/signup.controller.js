@@ -6,7 +6,7 @@ exports.getSignup = (req,res,next)=>{
     })
 }
 exports.postSignup = (req,res,next) => {
-    return console.log(validationResult(req))
+    return console.log(validationResult(req));
     authModel.CreateNewUser(req.body.username,req.body.email,req.body.password)
     .then(() =>
      res.redirect('/login'))
