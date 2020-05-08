@@ -17,5 +17,5 @@ router.post(
 router.get('/login', authGuard.notAuth, authController.getLogin)
 router.post('/login', authGuard.notAuth, bodyParser, authCheckLogin, authController.postLogin)
 
-router.all('/logout', authGuard.isAuth, authController.logout)
+router.all('/logout', authController.logout)
 module.exports = router;
