@@ -3,7 +3,8 @@ exports.getProduct = (req,res,next)=>{
     productsModel.getFirstProduct().then(product =>{
             res.render('product',{
                 product:product,
-                headstyle:'/css/bootstrap.min.css'
+                headstyle:'/css/bootstrap.min.css',
+                isUser:false
             })
             
         })
@@ -13,7 +14,8 @@ exports.getProductById = (req,res,next) => {
     productsModel.getProductById(productId).then(product =>{
         res.render('product',{
             product:product,
-            headstyle:'/css/bootstrap.min.css'
+            headstyle:'/css/bootstrap.min.css',
+            isUser:false
         })
         
     })
