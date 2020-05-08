@@ -8,7 +8,7 @@ const flash = require('connect-flash')
 
 const homeRouter = require('./routes/home.route')
 const productRouter = require('./routes/product.router')
-const signupRouter = require('./routes/authentications.routes/signup.route')
+const signupRouter = require('./routes/authentications.routes/auth.route')
 const app = express();
 
 // needed files images icons etc..
